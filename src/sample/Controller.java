@@ -11,6 +11,6 @@ public class Controller {
     public TextField out;
     public void clicked()
     {
-        solve.Companion.solve(in.getText());
+        out.setText(solve.Companion.solve(in.getText()));
     }
 }
