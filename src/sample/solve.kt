@@ -51,12 +51,13 @@ class solve {
             }
             var degfin = Math.floor(Math.sin(deg)*100)
             var massfin = 0.00
-            for (i in mass.indices)
+            i = 0
+            while (i<masscurr)
             {
                 massfin += 1.00 / mass[i]!!
+                i++
             }
             massfin = Math.ceil(1/massfin)
-            val cont = Controller()
             return (degfin.toString()+","+massfin.toString())
         }
     }
