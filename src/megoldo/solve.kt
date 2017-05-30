@@ -1,6 +1,6 @@
-package sample
+package megoldo
 
-import java.math.BigDecimal
+import java.util.*
 
 class solve {
     companion object
@@ -33,7 +33,7 @@ class solve {
                         }
                         else if (input.substring(i,i+2).equals(", "))
                         {
-                            deg += curr.toFloat()
+                            deg += curr.toDouble()
                             curr = ""
                             i++
                         }
@@ -49,7 +49,7 @@ class solve {
                 }
                 i++
             }
-            var degfin = Math.floor(Math.sin(deg)*100)
+            var degfin = Math.floor(Math.sin(Math.toRadians(deg))*100).toInt()
             var massfin = 0.00
             i = 0
             while (i<masscurr)
@@ -57,8 +57,8 @@ class solve {
                 massfin += 1.00 / mass[i]!!
                 i++
             }
-            massfin = Math.ceil(1/massfin)
-            return (degfin.toString()+","+massfin.toString())
+            massfin = Math.ceil(masscurr/massfin)
+            return (degfin.toString()+","+massfin.toInt().toString())
         }
     }
 }
