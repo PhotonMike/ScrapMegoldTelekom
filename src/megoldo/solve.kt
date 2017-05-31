@@ -1,7 +1,5 @@
 package megoldo
 
-import java.util.*
-
 class solve {
     companion object
     {
@@ -23,7 +21,7 @@ class solve {
                 {
                     if (inside)
                     {
-                        if (input.substring(i,i+3).equals("); ")||input.substring(i,i+1).equals(")"))
+                        if (input.substring(i,i+3).equals("); "))
                         {
                             inside = false
                             mass[masscurr]=curr.toFloat()
