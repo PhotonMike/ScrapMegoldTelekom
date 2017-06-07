@@ -10,7 +10,7 @@ class solve {
             var i = 0
             var inside = false
             var deg = 0.00
-            var mass = arrayOfNulls<Float>(9)
+            val mass = arrayOfNulls<Float>(9)
             var masscurr = 0
             var curr = ""
             while (i<=input.length)
@@ -23,7 +23,7 @@ class solve {
                 {
                     if (inside)
                     {
-                        if (input.substring(i,i+3).equals("); ")||input.substring(i,i+1).equals(")"))
+                        if (input.substring(i,i+3)=="); "||input.substring(i,i+1)==")")
                         {
                             inside = false
                             mass[masscurr]=curr.toFloat()
@@ -31,7 +31,7 @@ class solve {
                             curr = ""
                             i+=2
                         }
-                        else if (input.substring(i,i+2).equals(", "))
+                        else if (input.substring(i,i+2)==", ")
                         {
                             deg += curr.toDouble()
                             curr = ""
@@ -42,14 +42,14 @@ class solve {
                             curr += input.substring(i, i+1)
                         }
                     }
-                    else if (input.substring(i,i+1).equals("("))
+                    else if (input.substring(i,i+1)=="(")
                     {
                         inside = true
                     }
                 }
                 i++
             }
-            var degfin = Math.floor(Math.sin(Math.toRadians(deg))*100).toInt()
+            val degfin = Math.floor(Math.sin(Math.toRadians(deg))*100).toInt()
             var massfin = 0.00
             i = 0
             while (i<masscurr)
