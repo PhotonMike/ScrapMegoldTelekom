@@ -21,7 +21,7 @@ class solve {
                 {
                     if (inside)
                     {
-                        if (input.substring(i,i+3).equals("); "))
+                        if (input.substring(i,i+3)=="); ")
                         {
                             inside = false
                             mass[masscurr]=curr.toFloat()
@@ -29,7 +29,7 @@ class solve {
                             curr = ""
                             i+=2
                         }
-                        else if (input.substring(i,i+2).equals(", "))
+                        else if (input.substring(i,i+2)==", ")
                         {
                             deg += curr.toDouble()
                             curr = ""
@@ -40,7 +40,7 @@ class solve {
                             curr += input.substring(i, i+1)
                         }
                     }
-                    else if (input.substring(i,i+1).equals("("))
+                    else if (input.substring(i,i+1)=="(")
                     {
                         inside = true
                     }
